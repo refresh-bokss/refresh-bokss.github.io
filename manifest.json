@@ -1,0 +1,13 @@
+{
+    "short_name": "Re:Fresh",
+    "name": "Re:Fresh線上精神健康自助平台",
+    "icons": [
+      {
+        "src": "media/app-icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/record.html",
+    "display": "fullscreen"
+  }

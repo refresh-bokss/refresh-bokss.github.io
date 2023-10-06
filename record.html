@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://refresh.bokss.org.hk/tc/node/380 -->
+<html lang="zh-hant" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="錄音" />
+  <meta property="og:site_name" content="Re:Fresh線上精神健康自助平台" />
+  <meta property="og:title" content="錄音" />
+  <meta property="og:description" content="錄音" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="media/favicon.png" type="image/png" />
+  <link rel="manifest" href="manifest.json">
+  <title>錄音 | Re:Fresh線上精神健康自助平台</title>
+  <link rel="stylesheet" media="all" href="css/theme.css" />
+</head>
+<body class="complete-newcomer lang--zh-hant path-node page-node-type-page">
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    <div id="page">
+      <header id="header" class="bg-white border-b border-grey-light fixed top-0 right-0 left-0 menu-z-index">
+        <div class="block sm:flex py-2 lg:py-3 px-4 lg:px-8 justify-between items-center">
+          <div class="logo md:w-2/3 lg:w-auto">
+            <div class="text-grey-brown flex items-center">
+              <div class="border-r border-grey-brown pr-2 lg:pr-5 mr-2 lg:mr-5">
+                <img src="media/Logo_ReFresh.svg" alt="" class="w-[110px] md:w-[150px] lg:w-[200px]" />
+              </div>
+              <span>線上精神健康自助平台</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="region region-content">
+          <div id="block-bokss-page-title" class="block block-core block-page-title-block">
+            <div class="container">
+              <h1 class="page-title">
+                <span property="schema:name"
+                  class="field field--name-title field--type-string field--label-hidden">錄音</span>
+              </h1>
+            </div>
+          </div>
+          <div id="block-bokss-content" class="block block-system block-system-main-block">
+            <div class="node-container prose node my-6 pt-4 node--type-page">
+              <div class="container">
+                <div property="schema:text"
+                  class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                  <div id="recorddiv" class="text-center">
+                    <a id="record" onclick="globalstartrecording()" class="inline-block btnRound-thin btnRound-orange"
+                      style="color: black"><b>錄音</b></a>
+                  </div>
+                  <div id="timer" class="text-center">&nbsp;</div>
+                  <p>&nbsp;</p>
+                  <div id="stopdiv" class="text-center" style="display: none">
+                    <a id="stop" onclick="globalstoprecording()" class="inline-block btnRound-thin btnRound-orange"
+                      style="color: black"><b>停止</b></a>
+                  </div>
+                  <div id="audiodiv" style="display: none">
+                    <audio controls="controls" id="audio" style="margin: 0px auto; display: block">
+                      &nbsp;
+                    </audio>
+                    <form
+                      action="https://script.google.com/macros/s/AKfycbwPzWdK3g3h4kQGSZE1MIWUPMSmSUweJMISyzDVoIpErk8fr7sUfp4KwNSDHhPTikFe/exec"
+                      id="dataurl-form" method="post" onsubmit="function blank_function(); return false;">
+                      <input id="dataurl" name="dataurl" placeholder="dataurl" type="hidden" />
+                      <div class="text-center">
+                        <a id="restart" onclick="globalrestart()" class="inline-block btnRound-thin btnRound-orange"
+                          style="color: black; margin: 10px"><b>重新開始</b></a>
+                        <input type="submit" value="提交錄音" class="inline-block btnRound-thin btnRound-orange"
+                          style="color: black; margin: 10px" />
+                      </div>
+                    </form>
+                  </div>
+                  <div id="completediv" class="text-center" style="display: none">
+                    <b>你已完成提交，5秒後會轉到首頁</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="container mx-auto py-8 lg:pt-12 px-4">
+          <div class="region region-footer">
+            <div id="block-footerlogo"
+              class="block block-block-content block-block-contentd645aa57-f1e2-434d-b6f3-1a475c7ca6a1">
+              <div
+                class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                <div class="my-4">
+                  <div class="grid sm:grid-flow-col gap-4 lg:gap-10 justify-center">
+                    <div class="inline-flex items-center">
+                      <div><img alt="浸信會愛羣社會服務處" src="media/logo_BOKSS.png" class="w-[180px] mr-2" /></div><span
+                        class="text-sm">主辦</span>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <div><img alt="中國銀行（香港）" src="media/logo_BOC.png" class="w-[180px] mr-2" /></div><span
+                        class="text-sm">資助</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <span>© 2023 Refresh 線上精神健康自助平台</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/record.js"></script>
+</body>
+</html>
