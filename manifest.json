@@ -11,5 +11,6 @@
     ],
     "start_url": "/record.html",
     "background_color": "#ffffff",
+    "theme_color": "#ffffff",
     "display": "fullscreen"
   }
