@@ -1,7 +1,14 @@
+function globalgetstart() {
+  document.getElementById("introductiondiv").style.display = "none";
+  document.getElementById("recorddiv").style.display = "";
+  document.getElementById('block-bokss-page-title').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+}
+
 function globalstartrecording() {
   document.getElementById("recorddiv").style.display = "none";
   document.getElementById("timer").style.display = "";
   document.getElementById("stopdiv").style.display = "";
+  document.getElementById('block-bokss-page-title').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
   window.markDate = new Date();
   document.addEventListener("DOMContentLoaded", function () {
     var absentDivs = document.querySelectorAll("div.absent");
@@ -41,17 +48,20 @@ function globalstoprecording() {
   document.getElementById("stopdiv").style.display = "none";
   document.getElementById("timer").style.display = "none";
   document.getElementById("audiodiv").style.display = "";
+  document.getElementById('block-bokss-page-title').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
 }
 
 function globalsubmit() {
   document.getElementById("audiodiv").style.display = "none";
   document.getElementById("completediv").style.display = "";
+  document.getElementById('block-bokss-page-title').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
   setTimeout("window.location.href = '/record.html'", 5000);
 }
 
 function globalrestart() {
   document.getElementById("audiodiv").style.display = "none";
   document.getElementById("recorddiv").style.display = "";
+  document.getElementById('block-bokss-page-title').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
 }
 
 var record = document.getElementById("record");
@@ -76,6 +86,8 @@ stop.addEventListener("click", function () {
   if (recorder === null) return alert("請先錄音");
   recorder.stop();
   recorder.play(audio);
+  document.getElementById("selectSplide").value = document.getElementsByClassName("is-visible")[0].innerHTML.substring(23, 29);
+  document.getElementById("currentDate").value = moment().format('YYYY-MM-DD');
 });
 
 var form = document.getElementById("dataurl-form");
@@ -90,7 +102,7 @@ form.addEventListener("submit", function (e) {
     method: "POST",
     body: data,
   }).then(function () {
-    alert("Success!");
+    //alert("Success!");
   });
 });
 
