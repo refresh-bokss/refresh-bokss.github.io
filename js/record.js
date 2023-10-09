@@ -1,7 +1,11 @@
 function globalgetstart() {
   document.getElementById("introductiondiv").style.display = "none";
   document.getElementById("recorddiv").style.display = "";
-  document.getElementById('block-bokss-page-title').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+  document.getElementById('block-bokss-page-title').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+  new Splide( '.splide', {
+    type: 'loop',
+    perPage: 1, 
+  } ).mount();
 }
 
 function globalstartrecording() {
