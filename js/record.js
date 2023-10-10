@@ -90,7 +90,7 @@ stop.addEventListener("click", function () {
   if (recorder === null) return alert("請先錄音");
   recorder.stop();
   recorder.play(audio);
-  document.getElementById("selectSplide").value = document.getElementsByClassName("is-visible")[0].innerHTML.substring(23, 29);
+  document.getElementById("selectSplide").value = document.getElementsByClassName("is-visible")[0].innerHTML.substring(23, 25);
   document.getElementById("currentDate").value = moment().format('YYYY-MM-DD');
 });
 
