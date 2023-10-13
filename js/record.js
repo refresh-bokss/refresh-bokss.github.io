@@ -31,18 +31,18 @@ function updateClock() {
 }
 
 function format(seconds) {
-  var numhours = parseInt(
-    Math.floor(((seconds % 31536000) % 86400) / 3600),
-    10
-  );
+  //var numhours = parseInt(
+  //  Math.floor(((seconds % 31536000) % 86400) / 3600),
+  //  10
+  //);
   var numminutes = parseInt(
     Math.floor((((seconds % 31536000) % 86400) % 3600) / 60),
     10
   );
   var numseconds = parseInt((((seconds % 31536000) % 86400) % 3600) % 60, 10);
   return (
-    (numhours < 10 ? "0" + numhours : numhours) +
-    ":" +
+  //  (numhours < 10 ? "0" + numhours : numhours) +
+  //  ":" +
     (numminutes < 10 ? "0" + numminutes : numminutes) +
     ":" +
     (numseconds < 10 ? "0" + numseconds : numseconds)
@@ -308,8 +308,8 @@ form.addEventListener("submit", function (e) {
         lineColor: "white",
         lineWidth: 10,
         fillColor: { gradient: ["#F1DEC9", "#C8B6A6"] },
-        count: 20,
-        diameter: 10,
+        count: 30,
+        diameter: 50,
         frequencyBand: "base"
       }));
     };
