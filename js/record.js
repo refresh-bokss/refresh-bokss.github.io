@@ -146,7 +146,7 @@ form.addEventListener("submit", function (e) {
     config.numberOfInputChannels = config.channelCount;
     config.numberOfOutputChannels = config.channelCount;
     config.sampleBits = config.sampleBits || 16;
-    config.sampleRate = config.sampleRate || 8000;
+    config.sampleRate = config.sampleRate || 44100;
     config.bufferSize = 4096; //创建缓存，用来缓存声音
 
     var audioInput, volume, recorder, audioData;
@@ -301,6 +301,17 @@ form.addEventListener("submit", function (e) {
       recorder.connect(context.destination);
       //audioInput.connect(recorder);
       //recorder.connect(context.destination);
+      let canvasElementCurrent = document.querySelector("#canvasElmIdCurrent");
+      let waveCurrent = new Wave({context: context, source: audioInput}, canvasElementCurrent, true);
+
+      waveCurrent.addAnimation(new waveCurrent.animations.Circles({
+        lineColor: "white",
+        lineWidth: 10,
+        fillColor: { gradient: ["#F1DEC9", "#C8B6A6"] },
+        count: 20,
+        diameter: 10,
+        frequencyBand: "base"
+      }));
     };
     // 获取音频文件
     this.getBlob = function () {

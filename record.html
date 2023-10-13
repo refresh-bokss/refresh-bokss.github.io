@@ -50,6 +50,7 @@
   <link rel="stylesheet" media="all" href="css/theme.css" />
   <link rel="stylesheet" href="js/splide-4.1.3/dist/css/splide.min.css">
   <script src="js/splide-4.1.3/dist/js/splide.min.js"></script>
+  <script src="js/wave-2.0.4/dist/bundle.js"></script>
   <script src="js/moment.js"></script>
 </head>
 <body class="complete-newcomer lang--zh-hant path-node page-node-type-page">
@@ -134,15 +135,21 @@
                       style="color: black"><b>錄音</b></a>
                   </div>
                   <div id="timer" class="text-center">&nbsp;</div>
+                  
                   <p>&nbsp;</p>
                   <div id="stopdiv" class="text-center" style="display: none">
+                    <canvas id="canvasElmIdCurrent" width="2000" height="800" style="width: 80%; height: 80%; margin: 0px auto"></canvas>
+                    <div>&nbsp;</div>
                     <a id="stop" onclick="globalstoprecording()" class="inline-block btnRound-thin btnRound-orange"
                       style="color: black"><b>停止</b></a>
                   </div>
                   <div id="audiodiv" style="display: none">
-                    <audio controls="controls" id="audio" style="margin: 0px auto; display: block">
+                    <canvas id="canvasElmId" width="2000" height="800" style="width: 80%; height: 80%; margin: 0px auto"></canvas>
+                    
+                    <audio controls="controls" id="audio" style="width: 80%; margin: 0px auto; display: block">
                       &nbsp;
                     </audio>
+                    <div>&nbsp;</div>
                     <form
                       action="https://script.google.com/macros/s/AKfycbwXi06hfruPlfEkfi7pPBPOyD-eZonBrMIj1evvkq5-Q_MeZvT9h9yEOGV14i0ootENaQ/exec"
                       id="dataurl-form" method="post" onsubmit="function blank_function(); return false;">
@@ -192,6 +199,7 @@
     </div>
   </div>
   <script src="js/record.js"></script>
+  <script src="js/wave.js"></script>
 
 </body>
 </html>

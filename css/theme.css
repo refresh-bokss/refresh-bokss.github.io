@@ -402,6 +402,11 @@ object {
   /* 2 */
 }
 
+canvas {
+  background-color: #F5EBE0;
+  border-radius: 25px;
+  overflow: hidden;
+}
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
